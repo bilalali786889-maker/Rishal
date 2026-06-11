@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Grow With Rishal | We Grow Your Brand, Digitally</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#7b7487",
+                        "primary-fixed-dim": "#d2bbff",
+                        "surface-container-high": "#e6e8ea",
+                        "background": "#f7f9fb",
+                        "inverse-primary": "#d2bbff",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "secondary-fixed": "#ffdbca",
+                        "on-primary-fixed": "#25005a",
+                        "secondary-container": "#fd761a",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-tertiary-container": "#dee5ff",
+                        "surface-container": "#eceef0",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed": "#dae2fd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#5c2400",
+                        "tertiary": "#474e64",
+                        "on-primary-container": "#ede0ff",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#4a4455",
+                        "surface-dim": "#d8dadc",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#ccc3d8",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "secondary-fixed-dim": "#ffb690",
+                        "error": "#ba1a1a",
+                        "primary-container": "#7c3aed",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#732ee4",
+                        "error-container": "#ffdad6",
+                        "surface": "#f7f9fb",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "primary-fixed": "#eaddff",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-background": "#191c1e",
+                        "secondary": "#9d4300",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#341100",
+                        "primary": "#630ed4",
+                        "tertiary-container": "#5e667d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "pill": "9999px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "section-padding-mobile": "64px",
+                        "section-padding-desktop": "120px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bg-brand-gradient {
+            background: linear-gradient(135deg, #630ed4 0%, #fd761a 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #630ed4 0%, #fd761a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .border-gradient {
+            border: 2px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(135deg, #630ed4 0%, #fd761a 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl shadow-sm shadow-[0_10px_30px_-10px_rgba(15,23,42,0.08)]">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<a class="font-headline-sm text-headline-sm font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary-container" href="#">
+                Grow With Rishal
+            </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors duration-300" href="#services">Services</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors duration-300" href="#portfolio">Portfolio</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+<a class="bg-brand-gradient text-white px-8 py-3 rounded-2xl font-label-bold text-label-bold hover:scale-105 active:scale-95 transition-all shadow-md brightness-100 hover:brightness-110" href="#contact">
+                    Free Consultation
+                </a>
+</div>
+<button class="md:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-section-padding-mobile md:pt-48 md:pb-section-padding-desktop overflow-hidden">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute top-1/2 -left-24 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl"></div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="reveal">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">
+                    We <span class="text-gradient">Grow</span> Your Brand, Digitally.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    A creative agency dedicated to transforming your vision into digital excellence. We combine clinical strategy with organic creativity to push your brand's boundaries.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-brand-gradient text-white px-8 py-4 rounded-2xl font-label-bold text-label-bold text-center hover:scale-105 transition-transform shadow-lg" href="#contact">
+                        Get Free Consultation
+                    </a>
+<a class="border-2 border-primary text-primary px-8 py-4 rounded-2xl font-label-bold text-label-bold text-center hover:bg-primary/5 transition-all" href="#portfolio">
+                        View Our Work
+                    </a>
+</div>
+</div>
+<div class="relative reveal delay-200">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+<img alt="Agency Vision" class="w-full h-full object-cover" data-alt="A sophisticated and high-energy digital agency workspace featuring large monitors with vibrant UI designs. The lighting is crisp and modern with soft ambient purple and orange glows reflected in glass surfaces. Professional designers are subtly visible in the background, creating an atmosphere of innovation and strategic creative excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDGttpVOPdUpOkYWJHl8kNwD6a4TQkdjt2FSEHN7zluVgUkTq3vRia_wqTroZcdKbrtATC9vARzILSzfIBLo1g6eNFh6E39lKvCgozW-DT53LMsYomf6HaDfF_5R6fUaAxnRsw0D44cixPqId3KLrjHQRHGx5nWIA940NxlFiok73It8PjaNHPwpY9krBxsRAlt37z1waf2VEr-JxRVz8uOewOmkWT_18CYQiqZXggC0dXLliq21bzGNSLn7_3B4WeEhwRHBz6ldFQ"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[200px] animate-bounce">
+<span class="text-gradient font-bold text-headline-md block">150+</span>
+<span class="text-on-surface-variant text-sm font-label-bold">Brands Scaled Successfully</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low" id="services">
+<div class="max-w-container-max mx-auto px-gutter text-center mb-16 reveal">
+<span class="text-primary font-label-bold uppercase tracking-widest text-sm mb-4 block">Our Expertise</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Creative Services for Modern Growth</h2>
+</div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Service Card 1 -->
+<div class="reveal group bg-surface-container-lowest p-8 rounded-2xl shadow-[0_10px_30px_-10px_rgba(15,23,42,0.08)] hover:shadow-[0_20px_40px_-10px_rgba(99,14,212,0.15)] transition-all hover:-translate-y-2 border-b-4 border-transparent hover:border-primary">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-gradient group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="web">web</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Website Design</h3>
+<p class="text-on-surface-variant text-body-md">Conversion-focused, beautiful, and lightning-fast websites tailored for your niche.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="reveal delay-100 group bg-surface-container-lowest p-8 rounded-2xl shadow-[0_10px_30px_-10px_rgba(15,23,42,0.08)] hover:shadow-[0_20px_40px_-10px_rgba(99,14,212,0.15)] transition-all hover:-translate-y-2 border-b-4 border-transparent hover:border-secondary-container">
+<div class="w-16 h-16 bg-secondary-container/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-gradient group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="trending_up">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Digital Marketing</h3>
+<p class="text-on-surface-variant text-body-md">Data-driven strategies that expand your reach and skyrocket your ROI.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="reveal delay-200 group bg-surface-container-lowest p-8 rounded-2xl shadow-[0_10px_30px_-10px_rgba(15,23,42,0.08)] hover:shadow-[0_20px_40px_-10px_rgba(99,14,212,0.15)] transition-all hover:-translate-y-2 border-b-4 border-transparent hover:border-primary">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-gradient group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="post_add">post_add</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Social Media Posts</h3>
+<p class="text-on-surface-variant text-body-md">Engaging visuals and copy that build communities and foster brand loyalty.</p>
+</div>
+<!-- Service Card 4 -->
+<div class="reveal delay-300 group bg-surface-container-lowest p-8 rounded-2xl shadow-[0_10px_30px_-10px_rgba(15,23,42,0.08)] hover:shadow-[0_20px_40px_-10px_rgba(99,14,212,0.15)] transition-all hover:-translate-y-2 border-b-4 border-transparent hover:border-secondary-container">
+<div class="w-16 h-16 bg-secondary-container/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-gradient group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="campaign">campaign</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Brand Promotion</h3>
+<p class="text-on-surface-variant text-body-md">Strategic positioning to make your brand the first choice in your industry.</p>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 reveal">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-6 bg-white rounded-2xl shadow-sm border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="diamond">diamond</span>
+<h4 class="font-headline-sm text-headline-sm text-sm mb-2">Creative Excellence</h4>
+<p class="text-sm text-on-surface-variant">We don't just design; we create visual stories that resonate.</p>
+</div>
+<div class="p-6 bg-white rounded-2xl shadow-sm border-l-4 border-secondary-container">
+<span class="material-symbols-outlined text-secondary-container mb-2" data-icon="insights">insights</span>
+<h4 class="font-headline-sm text-headline-sm text-sm mb-2">Strategic Growth</h4>
+<p class="text-sm text-on-surface-variant">Every pixel and word is aimed at achieving your business goals.</p>
+</div>
+<div class="p-6 bg-white rounded-2xl shadow-sm border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="support_agent">support_agent</span>
+<h4 class="font-headline-sm text-headline-sm text-sm mb-2">Dedicated Support</h4>
+<p class="text-sm text-on-surface-variant">Our team is your team. We're with you at every step of the journey.</p>
+</div>
+<div class="p-6 bg-white rounded-2xl shadow-sm border-l-4 border-secondary-container">
+<span class="material-symbols-outlined text-secondary-container mb-2" data-icon="speed">speed</span>
+<h4 class="font-headline-sm text-headline-sm text-sm mb-2">Agile Delivery</h4>
+<p class="text-sm text-on-surface-variant">Fast turnarounds without compromising on clinical quality.</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 reveal">
+<h2 class="font-headline-md text-headline-md mb-6">Why Partner With <span class="text-gradient">Grow With Rishal</span>?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                    We understand that digital growth isn't just about presence—it's about dominance. Our multidisciplinary team works tirelessly to ensure your brand stands out in a crowded digital landscape.
+                </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+</div>
+<span class="font-label-bold">Tailored Strategy for Every Client</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+</div>
+<span class="font-label-bold">Transparent Reporting & Analytics</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+</div>
+<span class="font-label-bold">Innovative High-End Visuals</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container" id="portfolio">
+<div class="max-w-container-max mx-auto px-gutter text-center mb-16 reveal">
+<h2 class="font-headline-md text-headline-md mb-4">Our Recent Work</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Explore how we've helped diverse brands achieve their digital aspirations through creative excellence.</p>
+</div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="reveal group relative overflow-hidden rounded-2xl bg-white shadow-lg">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Fintech Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A clean and professional landing page design for a fintech startup, featuring glassmorphism elements, sleek dark-mode typography, and vibrant purple accents. The screenshot is captured in a high-quality mockup setting with clean shadows and a minimalist background, emphasizing a high-end agency aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKyE1XjJZXd36mXjiT4TKhXnAFMb6RM87GLEq9TE219j9qmNESI3gFDlOklTtGeO7bGMOAx6kRI58rpIH6TBOo8vNTSRxJoJaPJEoZoAx4mbgXqn-pDxz6Z8aFP02lq4AHvzIxGj2yPK_foorzvEBmvfh7je5aFZAu33zdPoMu2NDRYF3WR1G6Z0B7J4TrI3Pz9N1QaaUngpzAQJY4eB4nIXWsMOak7Y1TCriTwRwrugwEfD5t6WtF-UZA-_fmUzESCsPexgj5Yvix"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+<h4 class="font-headline-sm text-headline-sm mb-2">Fintech Innovator</h4>
+<p class="text-sm font-label-bold mb-4">Web Design & Brand Identity</p>
+<a class="inline-flex items-center gap-2 font-label-bold hover:underline" href="#">
+                        View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="reveal delay-100 group relative overflow-hidden rounded-2xl bg-white shadow-lg">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="E-commerce Campaign" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern smartphone displaying a sleek social media campaign for a premium lifestyle brand. The screen features high-contrast imagery, bold typography, and a cohesive orange-tinted visual language. The phone sits on a minimalist marble surface with soft natural lighting, reflecting a professional brand promotion project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7JZ7HjOnxzEqraugV4_eeGh5wzLSwVeUl5FxVcNHc8apOTZZM3aGRzZG8HenkU6Qpu32qM-N7-_lzcO_haUNrqK5t2OGabhyViVt6ve4KZG8WXHLfvY6thPHI5kR3v-kVdpjcxFA19wDtOSX5suucdRJxagFFD0vH3bS2tM0WtFRpjoSEbTUow2Fr0IzbyZZlzktHH5XoF5TmGV71CMpyDS7TJG3UllOeyyzio6oe7CLlDJtGdDzvUJ1T_z57K7QWhohd8Ix0HMmk"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary-container/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+<h4 class="font-headline-sm text-headline-sm mb-2">Luxe Lifestyle</h4>
+<p class="text-sm font-label-bold mb-4">Social Media & Promotion</p>
+<a class="inline-flex items-center gap-2 font-label-bold hover:underline" href="#">
+                        View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="reveal delay-200 group relative overflow-hidden rounded-2xl bg-white shadow-lg">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Brand Identity" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Vibrant and colorful brand collateral including logo sketches, business cards, and digital interface designs spread across a minimalist white table. The scene is illuminated by soft, high-key studio lighting, highlighting the primary purple and secondary orange brand colors. The overall mood is energetic and clinical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi5_NUHtL24zEsFO8Q13xFXNMZkEqAfRLqyserUBIhu1fb9i_7geDCA2cKXLnXx8SCRMUcdpN-uKJgZdTfy1f3dKq2HgEekSYq_AuhEdeGHNO1cXCbsalDeiGbBTIYb6MJLR_QaUP2mE82tK0GWEVUSvDdvRL7MD8OQjyVKofPkO3yt8R4DAaBogeiV4F2-2lOVFQLaLCU9YzrzkUP7KsXenaYFoj6PlokVfwhASiELdGy4P4TZO4J8S97WKBkOTYyb5nsANg3RywD"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+<h4 class="font-headline-sm text-headline-sm mb-2">Tech Solutions</h4>
+<p class="text-sm font-label-bold mb-4">Digital Strategy & Logo Design</p>
+<a class="inline-flex items-center gap-2 font-label-bold hover:underline" href="#">
+                        View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16 reveal">
+<h2 class="font-headline-md text-headline-md">Trusted by Global Brands</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Testimonial 1 -->
+<div class="reveal bg-white p-10 rounded-2xl shadow-[0_10px_30px_-10px_rgba(15,23,42,0.08)] relative">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-8 right-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="italic text-body-lg text-on-surface-variant mb-8 relative z-10">
+                        "Grow With Rishal transformed our online presence. Their attention to detail in the website redesign led to a 40% increase in our monthly leads. Truly a remarkable team to work with!"
+                    </p>
+<div class="flex items-center gap-4">
+<img alt="Sarah Miller" class="w-14 h-14 rounded-full object-cover shadow-md" data-alt="Professional headshot of a confident male executive in his late 30s. He is wearing a modern charcoal blazer and a white shirt, smiling warmly against a blurred office background. The lighting is soft and professional, emphasizing trust and corporate excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-2JOngkwkOtKgntGk7LSbKFSS3u3e33jPMx7MdthhF7IpHvOYfBoB_crf_cQX5tzcg9kG7n5PuZF7q5r4JVqpPWvk1AA5-LJ-b5DcdKnq_Z6V7oMtk1HMh9R5QdV_Xrie2lvyOIPYpBTFweo8dQox8viXJG2FOMIiZ7XMXDtgItLRehgG6VjkAZRaWhhjsxODikJdi7Ix923Cjj6ZJ0QCsex6GxQmJSR3fkl40p6N8EZw9XsboMj9nYuM2EPZB7sG6xdv4vwt6Lmy"/>
+<div>
+<h5 class="font-label-bold text-on-surface">Alex Thompson</h5>
+<p class="text-xs text-on-surface-variant uppercase tracking-wide">CEO, NexGen Systems</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="reveal delay-200 bg-white p-10 rounded-2xl shadow-[0_10px_30px_-10px_rgba(15,23,42,0.08)] relative">
+<span class="material-symbols-outlined text-6xl text-secondary-container/10 absolute top-8 right-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="italic text-body-lg text-on-surface-variant mb-8 relative z-10">
+                        "The social media strategy provided by Rishal's team was a game-changer. Our engagement rates doubled within two months. They really know how to speak to our audience."
+                    </p>
+<div class="flex items-center gap-4">
+<img alt="Michael Chen" class="w-14 h-14 rounded-full object-cover shadow-md" data-alt="Professional headshot of a female entrepreneur with a creative and approachable look. She is in a bright, modern studio with soft daylight. The image has a light-mode aesthetic with clean white backgrounds, reflecting a modern creative agency client." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqC7-Mjjc2-y41catR0fdvpR0KTA4jf7fDLwFYiIOHZrfhdrVsqxlo9lNJyDwELV4o2umlleGnQ6PMT7dndhx9zuDPb9UZd1FdaIgsDG7WXnp4jJvv6eSYnB-RWmzMCagmW5T2yYuGtsNEl8lSoFWcsb6QrLJYGLNw1wTQmN1F21GeMXdgGgrcLWJj2t-608xTCLnZwbpZYYg56Ic517BAqYyM9Buu5nbNU21vm9l6zov65U5JjwH4_pg6J8AtxPLgKEBemzKtxzSB"/>
+<div>
+<h5 class="font-label-bold text-on-surface">Sarah Miller</h5>
+<p class="text-xs text-on-surface-variant uppercase tracking-wide">Marketing Director, Bloom Retail</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low overflow-hidden" id="contact">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div class="reveal">
+<h2 class="font-headline-md text-headline-md mb-6">Let's Grow <span class="text-gradient">Together</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                    Ready to take your brand to the next level? Fill out the form or reach out through our social channels. We typically respond within 24 hours.
+                </p>
+<div class="space-y-6">
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-sm font-label-bold text-on-surface-variant uppercase">Email Us</p>
+<a class="font-headline-sm text-lg hover:text-primary transition-colors" href="mailto:bilalali786889@gmail.com">bilalali786889@gmail.com</a>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-secondary-container group-hover:bg-secondary-container group-hover:text-white transition-all">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div>
+<p class="text-sm font-label-bold text-on-surface-variant uppercase">Follow Us</p>
+<a class="font-headline-sm text-lg hover:text-secondary-container transition-colors" href="https://instagram.com/grow.with.rishal">@grow.with.rishal</a>
+</div>
+</div>
+<a class="inline-flex items-center gap-4 bg-[#25D366] text-white px-8 py-4 rounded-2xl font-label-bold hover:scale-105 transition-all shadow-lg mt-4" href="https://wa.me/918948287658">
+<span class="material-symbols-outlined">chat</span>
+                        Chat on WhatsApp
+                    </a>
+</div>
+</div>
+<div class="reveal bg-white p-8 md:p-12 rounded-3xl shadow-2xl relative">
+<div class="absolute -top-10 -right-10 w-24 h-24 bg-brand-gradient rounded-full blur-2xl opacity-20"></div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-label-bold mb-2 text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface p-4 rounded-2xl border-none focus:ring-2 focus:ring-primary transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-label-bold mb-2 text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface p-4 rounded-2xl border-none focus:ring-2 focus:ring-primary transition-all" placeholder="john@example.com" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-label-bold mb-2 text-on-surface-variant">Your Message</label>
+<textarea class="w-full bg-surface p-4 rounded-2xl border-none focus:ring-2 focus:ring-primary transition-all" placeholder="Tell us about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-brand-gradient text-white p-4 rounded-2xl font-label-bold hover:brightness-110 transition-all shadow-lg" type="submit">
+                        Send Message
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest pt-section-padding-desktop pb-8">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-gutter text-left mb-16">
+<div>
+<a class="font-headline-sm text-headline-sm font-bold text-primary mb-6 block" href="#">Grow With Rishal</a>
+<p class="text-on-surface-variant font-body-md text-body-md pr-8">
+                    Empowering brands through digital innovation and creative excellence. We are your partners in growth.
+                </p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase tracking-widest text-primary mb-6">Quick Links</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-secondary-container transition-colors" href="#services">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary-container transition-colors" href="#portfolio">Portfolio</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary-container transition-colors" href="#contact">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase tracking-widest text-primary mb-6">Contact Info</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        bilalali786889@gmail.com
+                    </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+                        +91 89482 87658
+                    </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">person</span>
+                        Instagram: grow.with.rishal
+                    </li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant font-body-md text-body-md">© 2024 Grow With Rishal. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Reveal on scroll animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        // Simple placeholder for menu logic
+        menuBtn.addEventListener('click', () => {
+            alert('Mobile navigation would expand here in a full implementation.');
+        });
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>
